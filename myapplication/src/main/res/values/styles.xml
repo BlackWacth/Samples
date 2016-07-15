@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ActivityTheme" parent="AppTheme">
+        <item name="android:alwaysRetainTaskState">true</item>
+        <item name="android:configChanges">keyboardHidden|orientation|screenSize</item>
+    </style>
+
+    <style name="ActivityTheme.Portrait" parent="ActivityTheme">
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+
+    <style name="ActivityTheme.Landscape" parent="ActivityTheme">
+        <item name="android:screenOrientation">landscape</item>
+    </style>
+
+</resources>
