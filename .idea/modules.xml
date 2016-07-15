@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Dragger2/Dragger2.iml" filepath="$PROJECT_DIR$/Dragger2/Dragger2.iml" />
       <module fileurl="file://$PROJECT_DIR$/LuckyPlate/LuckyPlate.iml" filepath="$PROJECT_DIR$/LuckyPlate/LuckyPlate.iml" />
       <module fileurl="file://$PROJECT_DIR$/MVideo/MVideo.iml" filepath="$PROJECT_DIR$/MVideo/MVideo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Samples.iml" filepath="$PROJECT_DIR$/Samples.iml" />
