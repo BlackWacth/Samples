@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/MVideo/MVideo.iml" filepath="$PROJECT_DIR$/MVideo/MVideo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Samples.iml" filepath="$PROJECT_DIR$/Samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/SlidingViewPager/SlidingViewPager.iml" filepath="$PROJECT_DIR$/SlidingViewPager/SlidingViewPager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Transitions/Transitions.iml" filepath="$PROJECT_DIR$/Transitions/Transitions.iml" />
       <module fileurl="file://$PROJECT_DIR$/LuckyPlate/app.iml" filepath="$PROJECT_DIR$/LuckyPlate/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/bezier/bezier.iml" filepath="$PROJECT_DIR$/bezier/bezier.iml" />
       <module fileurl="file://$PROJECT_DIR$/myapplication/myapplication.iml" filepath="$PROJECT_DIR$/myapplication/myapplication.iml" />

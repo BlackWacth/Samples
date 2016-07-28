@@ -107,6 +107,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    /**
+     * 注释
+     */
     private void obtainAnimation() {
         mAnimation = new Rotate3DAnimation(0, 180, centerX, centerY, depthZ, false);
         mAnimation.setDuration(duration);
