@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Dragger2/Dragger2.iml" filepath="$PROJECT_DIR$/Dragger2/Dragger2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FireChat/FireChat.iml" filepath="$PROJECT_DIR$/FireChat/FireChat.iml" />
       <module fileurl="file://$PROJECT_DIR$/Flicker/Flicker.iml" filepath="$PROJECT_DIR$/Flicker/Flicker.iml" />
       <module fileurl="file://$PROJECT_DIR$/LuckyPlate/LuckyPlate.iml" filepath="$PROJECT_DIR$/LuckyPlate/LuckyPlate.iml" />
       <module fileurl="file://$PROJECT_DIR$/MVideo/MVideo.iml" filepath="$PROJECT_DIR$/MVideo/MVideo.iml" />

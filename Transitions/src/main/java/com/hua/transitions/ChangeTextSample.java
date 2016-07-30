@@ -17,7 +17,7 @@ import com.transitionseverywhere.ChangeText;
 public class ChangeTextSample extends Fragment {
 
     public static final String TEXT_1 = "Hi, i am text. Tap on me!";
-    public static final String TEXT_2 = "Thanks! Another tap?";
+    public static final String TEXT_2 = "Thanks! Another tap?"; //this is test
 
     @Nullable
     @Override
@@ -26,7 +26,6 @@ public class ChangeTextSample extends Fragment {
 
         final ViewGroup transitionsContainer = (ViewGroup) view.findViewById(R.id.transitions_container);
         final TextView textView = (TextView) transitionsContainer.findViewById(R.id.text1);
-
         textView.setText(TEXT_1);
         textView.setOnClickListener(new View.OnClickListener() {
 
@@ -35,8 +34,7 @@ public class ChangeTextSample extends Fragment {
             @Override
             public void onClick(View v) {
                 mSecondText = !mSecondText;
-                TransitionManager.beginDelayedTransition(transitionsContainer,
-                    new ChangeText().setChangeBehavior(ChangeText.CHANGE_BEHAVIOR_OUT_IN));
+                TransitionManager.beginDelayedTransition(transitionsContainer, new ChangeText().setChangeBehavior(ChangeText.CHANGE_BEHAVIOR_OUT_IN));
                 textView.setText(mSecondText ? TEXT_2 : TEXT_1);
             }
 

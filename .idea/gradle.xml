@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Dragger2" />
+            <option value="$PROJECT_DIR$/FireChat" />
             <option value="$PROJECT_DIR$/Flicker" />
             <option value="$PROJECT_DIR$/LuckyPlate" />
             <option value="$PROJECT_DIR$/MVideo" />
@@ -25,6 +26,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Dragger2" />
+            <option value="$PROJECT_DIR$/FireChat" />
             <option value="$PROJECT_DIR$/Flicker" />
             <option value="$PROJECT_DIR$/LuckyPlate" />
             <option value="$PROJECT_DIR$/MVideo" />
