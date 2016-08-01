@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "965970549951",
+    "firebase_url": "https://openfire-60df9.firebaseio.com",
+    "project_id": "openfire-60df9",
+    "storage_bucket": "openfire-60df9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965970549951:android:ffdc61679d65be2c",
+        "android_client_info": {
+          "package_name": "com.hua.openfire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965970549951-se55kt3shghftfcppu935lq3vrm8gn1g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hua.openfire",
+            "certificate_hash": "408D7DD59D109C7133D34D8F5FF05FB351DF358A"
+          }
+        },
+        {
+          "client_id": "965970549951-k4lvso9oc8tc5q75b1s29t0292agrsc9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOYPxNpmhWENVO8LqCE04-7oInEVEmSy4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965970549951-k4lvso9oc8tc5q75b1s29t0292agrsc9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
