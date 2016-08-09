@@ -4,10 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.hua.openfire.auth.CustomAuthActivity;
+import com.hua.openfire.auth.EmailAuthActivity;
 import com.hua.openfire.auth.GoogleSignInActivity;
 import com.hua.openfire.base.BaseActivity;
 
-public class MainActivity extends BaseActivity implements View.OnClickListener{
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +21,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
+
         switch (v.getId()) {
             case R.id.btn_auth:
-                startActivity(GoogleSignInActivity.class);
+                startActivity(CustomAuthActivity.class);
                 break;
         }
     }

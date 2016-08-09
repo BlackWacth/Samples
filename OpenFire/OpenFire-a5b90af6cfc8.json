@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "openfire-60df9",
+  "private_key_id": "a5b90af6cfc833b6d8c6244c3873e26e0492c07c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCF6OtyPGKUp3uc\n9L2Z4ufdqsuRQhsfFG5urdxd9wjG908Fve9NsAqYvGzb9MbFt6S4MAQvAzW3u++r\nn1cAnOgsxNxyErRuNUz4bAShkrj55Ghlbb+Wh/g66WxHSnC+6susKF/zwjTxDtMo\nCMYexaCsBje81vV1T9lXR9x0FR0h4euzC3alftTxV6L3RP5KGJPkpQZb9rwaUJeO\nO7+ErOJKuKXqENLvM8ef5SNpzCHEldDYCAhyOr76CWdzNyS8llouJ2ZVJNyJ6jXI\nDeDqTAwMiC8krxnsnJ9yAo06XapVMz8Stli0d3m44kOaTBrrd30Jy0Xf7q0uhM4L\nFBSSdj0TAgMBAAECggEAONLH5mfdZTtU5xurwTtaLOQnEfK9U4j1+51nX7BOVy/m\npoccnxjOxlVe1E+gcZImIcquW8y+5MKpR2iMIMR0eVroOLfbPND9YoVjybRbLh9Q\ndYoGvLfiDA21VuMtyLYVy24umV+V25zw2ZIvkCtIrPbOfCGzcx55GeJymAfFnvR/\n182zTN1V8ycuEW+rkWBtkatw0rd4RSefqWwOlrYtavyvHRXi201YuEwErbKujV9I\n81uDDaF9e7hiR/P5RSdPSiAFev71C9HCD657EvSbVxg1N1U7CQv5yj4sG03llwbS\nvHRPC0X89A/Dcr9aLzy0k5gfU5K4JIpFF3MPw9Kh0QKBgQDq3zPAYPSHPm/7WO4U\nLupfnFmZCo3RMyTFyG6MUPmi1jzPJWoPWaEdweD4VcaNu7VKyOcBS7BaQfMY16+D\nuv730D3SvhYS8q6J400DX1MqlwaFXBRu0RwsCEuO/VKO44eQjcnQXXTunjHEgxPy\ngUQDVtZUNjJV86PLWb6fzMpwjQKBgQCR9LEArai/SbufqNFMl+5Y7+VV4TsodmN3\nn+DTXhMOQEUtQ3RpUwjzpFjsAYZlLdjco3DfATxScdCfbVqC99QPyCqks93L3dSc\nGjaAoSjyux8NjhwEp3yrQBtrgqwjCgPQzncA7vY+M9mmFGngXlrWzIXTyQ1CFT5p\nPhmlrlwMHwKBgGHlLnjc8I7+Y0ZsRq967o1zaZT0ZS/xFT6q0AkEJ0jL6wScH5zO\nSu1QRii798pTlrjZDA/qMFMucdjE7Y8GfgdkcKBKQoEbTcyDRTJGpS93S2yCeLHH\nzuo7euLai3KrO3Hw51FF4tsibLPvvnyxjFun8iWfgVN5/adgfKe2gBpxAoGAHIUZ\nyS4l2SsJNIuCSlstwccuovdd3ew0R33AKs0pIBHC8rNJngMRrrogfg1WO5MX2xU8\nyvas2NdQkraFhy3yDBtq6cATyPBRySb+G2hiXfved4GbS/WGUNg4A2wHQtmEIVsW\nueH3z/PFxcQbZDJLwck5JUcWBiGsjlgKHuvRJLUCgYArDqE0FDODFhDQLt2pzs2X\ndWUBkpGiGLxg1H5SM5Be4H0/qUk2dH4Jq1eVuEI0uvLpLR3QnJGfaI2SV4/vbvPl\nCREepDDbUQ58xjegdox6ynx9ZBq+JtEm104J+VwDYvsUpcLU1TSUp1g5OKJHDsD5\niUhaJH17MBBkW8IGM0Q99Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "bruce-768@openfire-60df9.iam.gserviceaccount.com",
+  "client_id": "104745784676422161437",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bruce-768%40openfire-60df9.iam.gserviceaccount.com"
+}
