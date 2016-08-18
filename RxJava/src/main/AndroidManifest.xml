@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.hua.rxjava">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,6 +17,18 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".OperatorsActivity">
+        </activity>
+        <activity android:name=".operator.CreatingActivity">
+        </activity>
+        <activity android:name=".operator.TransformingActivity">
+        </activity>
+        <activity android:name=".operator.FilteringActivity">
+        </activity>
+
+        <activity android:name=".operator.CombiningActivity">
+        </activity>
+
     </application>
 
 </manifest>

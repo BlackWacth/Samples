@@ -1,83 +1,57 @@
 package com.hua.rxjava;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.AndroidException;
 import android.util.Log;
-
-import rx.Observable;
-import rx.Subscriber;
-import rx.functions.Action1;
-import rx.functions.Func1;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String tag = "hzw";
+    public static final String tag = "MainActivity";
+    public static final String EXTRA_OPERATOR_CATEGORIES = "EXTRA_OPERATOR_CATEGORIES";
 
-    public String[] ary = {"Java", "C++", "Python", "Php"};
+    private ListView mListView;
+    private ArrayAdapter<String> mArrayAdapter;
+
+    private String[] titles = new String[]{
+            "1 创建操作",
+            "2 变换操作",
+            "3 过滤操作",
+            "4 组合操作",
+            "5 错误操作",
+            "6 辅助操作",
+            "7 条件与布尔操作",
+            "8 算术和聚合操作",
+            "9 异步操作",
+            "10 连接操作",
+            "11 转换操作",
+            "12 阻塞操作",
+            "13 字符串操作"
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        Observable.create(new Observable.OnSubscribe<String>() {
-//            @Override
-//            public void call(Subscriber<? super String> subscriber) {
-//                Log.i(tag, "OnSubscribe --> call");
-//                subscriber.onNext("Java");
-//                subscriber.onNext("C++");
-//                subscriber.onNext("Python");
-//                subscriber.onNext("PHP");
-//                subscriber.onCompleted();
-//            }
-//        })
-//        Observable.from(ary)
-//                .subscribe(new Subscriber<String>() {
-//                    @Override
-//                    public void onCompleted() {
-//                        Log.i(tag, "onCompleted");
-//                    }
-//
-//                    @Override
-//                    public void onError(Throwable e) {
-//                        Log.i(tag, "onError : " + e.getMessage() + " : " + e.getCause());
-//                    }
-//
-//                    @Override
-//                    public void onNext(String s) {
-//                        Log.i(tag, "onNext : " + s);
-//                    }
-//                });
+        mListView = (ListView) findViewById(R.id.main_listview);
 
-//        Observable.just("Java", "C++")
-//                .subscribe(new Action1<String>() {
-//                    @Override
-//                    public void call(String s) {
-//                        Log.i(tag, "Action1 -> call : " + s);
-//                    }
-//                });
+        mArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, titles);
 
-        Observable.just("Java", "C++")
-                .map(new Func1<String, String>() {
-                    @Override
-                    public String call(String s) {
-                        Log.i(tag, "map -> Func1 -> call : " + s);
-                        return "Python";
-                    }
-                })
-                .filter(new Func1<String, Boolean>() {
-                    @Override
-                    public Boolean call(String s) {
-                        return "C++".equals(s);
-                    }
-                })
-                .subscribe(new Action1<String>() {
-                    @Override
-                    public void call(String s) {
-                        Log.i(tag, "subscribe -> Action1 -> call : " + s);
-                    }
-                });
+        mListView.setAdapter(mArrayAdapter);
 
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.i(tag, tag + " ： position = " + position);
+                Intent intent = new Intent(MainActivity.this, OperatorsActivity.class);
+                intent.putExtra(EXTRA_OPERATOR_CATEGORIES, position);
+                startActivity(intent);
+            }
+        });
     }
 }
