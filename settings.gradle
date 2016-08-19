@@ -1,1 +1,1 @@
-include ':LuckyPlate', ':rotate3d', ':myapplication', ':bezier', ':navigationbar', ':MVideo', ':Dragger2', ':Flicker', ':SlidingViewPager', ':Transitions', ':FireChat', ':OpenFire', ':RxJava', ':OkHttp'
+include ':LuckyPlate', ':rotate3d', ':myapplication', ':bezier', ':navigationbar', ':MVideo', ':Dragger2', ':Flicker', ':SlidingViewPager', ':Transitions', ':FireChat', ':OpenFire', ':RxJava', ':OkHttp', ':AppUpgrade'

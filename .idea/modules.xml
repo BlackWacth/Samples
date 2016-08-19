@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AppUpgrade/AppUpgrade.iml" filepath="$PROJECT_DIR$/AppUpgrade/AppUpgrade.iml" />
       <module fileurl="file://$PROJECT_DIR$/Dragger2/Dragger2.iml" filepath="$PROJECT_DIR$/Dragger2/Dragger2.iml" />
       <module fileurl="file://$PROJECT_DIR$/FireChat/FireChat.iml" filepath="$PROJECT_DIR$/FireChat/FireChat.iml" />
       <module fileurl="file://$PROJECT_DIR$/Flicker/Flicker.iml" filepath="$PROJECT_DIR$/Flicker/Flicker.iml" />
