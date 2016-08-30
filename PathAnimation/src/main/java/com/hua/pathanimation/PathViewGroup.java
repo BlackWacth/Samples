@@ -96,6 +96,7 @@ public class PathViewGroup extends ViewGroup {
             mIconViews[i] = iconView;
             addView(iconView);
         }
+        setWillNotDraw(false);
     }
 
     @Override
@@ -115,8 +116,8 @@ public class PathViewGroup extends ViewGroup {
         Log.i(tag, "onMeasure");
         int rw = MeasureSpec.getSize(widthMeasureSpec);
         int rh = MeasureSpec.getSize(heightMeasureSpec);
-        Log.i(tag, "rw = " + rw);
-        Log.i(tag, "rh = " + rh);
+//        Log.i(tag, "rw = " + rw);
+//        Log.i(tag, "rh = " + rh);
         measureChildren(widthMeasureSpec, heightMeasureSpec);
         int cWidth;
         int cHeight;
@@ -126,8 +127,8 @@ public class PathViewGroup extends ViewGroup {
             cWidth = child.getMeasuredWidth();
             cHeight = child.getMeasuredHeight();
 
-            Log.i(tag, "cWidth = " + cWidth);
-            Log.i(tag, "cHeight = " + cHeight);
+//            Log.i(tag, "cWidth = " + cWidth);
+//            Log.i(tag, "cHeight = " + cHeight);
         }
         setMeasuredDimension(rw, rh);
     }
@@ -135,7 +136,13 @@ public class PathViewGroup extends ViewGroup {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        Log.i(tag, "onDraw");
         canvas.drawPath(mPath, mPaint);
+    }
+
+    @Override
+    protected LayoutParams generateLayoutParams(LayoutParams p) {
+        return new MarginLayoutParams(p);
     }
 
     public void startAnimation() {
@@ -143,4 +150,5 @@ public class PathViewGroup extends ViewGroup {
             mIconViews[i].startAnimator();
         }
     }
+
 }
