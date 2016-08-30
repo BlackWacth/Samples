@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AR" />
             <option value="$PROJECT_DIR$/AppUpgrade" />
             <option value="$PROJECT_DIR$/Dragger2" />
             <option value="$PROJECT_DIR$/FireChat" />
@@ -17,6 +18,8 @@
             <option value="$PROJECT_DIR$/MVideo" />
             <option value="$PROJECT_DIR$/OkHttp" />
             <option value="$PROJECT_DIR$/OpenFire" />
+            <option value="$PROJECT_DIR$/PathAnimation" />
+            <option value="$PROJECT_DIR$/Retrofit" />
             <option value="$PROJECT_DIR$/RxJava" />
             <option value="$PROJECT_DIR$/SlidingViewPager" />
             <option value="$PROJECT_DIR$/Transitions" />
@@ -29,6 +32,7 @@
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AR" />
             <option value="$PROJECT_DIR$/AppUpgrade" />
             <option value="$PROJECT_DIR$/Dragger2" />
             <option value="$PROJECT_DIR$/FireChat" />
@@ -37,6 +41,8 @@
             <option value="$PROJECT_DIR$/MVideo" />
             <option value="$PROJECT_DIR$/OkHttp" />
             <option value="$PROJECT_DIR$/OpenFire" />
+            <option value="$PROJECT_DIR$/PathAnimation" />
+            <option value="$PROJECT_DIR$/Retrofit" />
             <option value="$PROJECT_DIR$/RxJava" />
             <option value="$PROJECT_DIR$/SlidingViewPager" />
             <option value="$PROJECT_DIR$/Transitions" />

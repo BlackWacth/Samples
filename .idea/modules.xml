@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AR/AR.iml" filepath="$PROJECT_DIR$/AR/AR.iml" />
       <module fileurl="file://$PROJECT_DIR$/AppUpgrade/AppUpgrade.iml" filepath="$PROJECT_DIR$/AppUpgrade/AppUpgrade.iml" />
       <module fileurl="file://$PROJECT_DIR$/Dragger2/Dragger2.iml" filepath="$PROJECT_DIR$/Dragger2/Dragger2.iml" />
       <module fileurl="file://$PROJECT_DIR$/FireChat/FireChat.iml" filepath="$PROJECT_DIR$/FireChat/FireChat.iml" />
@@ -10,6 +11,8 @@
       <module fileurl="file://$PROJECT_DIR$/MVideo/MVideo.iml" filepath="$PROJECT_DIR$/MVideo/MVideo.iml" />
       <module fileurl="file://$PROJECT_DIR$/OkHttp/OkHttp.iml" filepath="$PROJECT_DIR$/OkHttp/OkHttp.iml" />
       <module fileurl="file://$PROJECT_DIR$/OpenFire/OpenFire.iml" filepath="$PROJECT_DIR$/OpenFire/OpenFire.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PathAnimation/PathAnimation.iml" filepath="$PROJECT_DIR$/PathAnimation/PathAnimation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Retrofit/Retrofit.iml" filepath="$PROJECT_DIR$/Retrofit/Retrofit.iml" />
       <module fileurl="file://$PROJECT_DIR$/RxJava/RxJava.iml" filepath="$PROJECT_DIR$/RxJava/RxJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/Samples.iml" filepath="$PROJECT_DIR$/Samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/SlidingViewPager/SlidingViewPager.iml" filepath="$PROJECT_DIR$/SlidingViewPager/SlidingViewPager.iml" />
