@@ -33,12 +33,11 @@ public class PathViewGroup extends ViewGroup {
     private long mBlockDuration;
     private Bitmap[] mIconBitmaps;
     private IconView[] mIconViews;
-    private Paint mPaint;
+
     private float mPathLength;
     private float mLength;
-    private Path mPath;
-    private RectF mRectF;
     private PathMeasure mPathMeasure;
+    private PathView mPathView;
 
 
     public PathViewGroup(Context context) {
@@ -56,35 +55,27 @@ public class PathViewGroup extends ViewGroup {
         init(context);
     }
 
-    public PathViewGroup(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        init(context);
-    }
-
     private void init(Context context) {
-        mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mPaint.setStyle(Paint.Style.STROKE);
-        mPaint.setStrokeWidth(3);
-        mPaint.setColor(Color.RED);
 
-        mPath = new Path();
-        mRectF = new RectF(-320, 300, 780, 1400);
-        mPath.addArc(mRectF, 90, -180);
+        mPathView = new PathView(context);
+        addView(mPathView);
 
-        mPathMeasure = new PathMeasure(mPath, false);
-        mPathLength = mPathMeasure.getLength();
+        mPathMeasure = mPathView.getPathMeasure();
+        mPathLength = mPathView.getPathLength();
+
         mLength = mPathLength / icons.length;
         mBlockDuration = duration / icons.length;
 
         mIconBitmaps = new Bitmap[icons.length];
         mIconViews = new IconView[icons.length];
+
         long delay = 0;
+        Bitmap bitmap;
         for (int i = 0; i < icons.length; i++) {
-            mIconBitmaps[i] = BitmapFactory.decodeResource(getResources(), icons[i]);
+            bitmap = BitmapFactory.decodeResource(getResources(), icons[i]);
 
             IconView iconView = new IconView(context);
-            iconView.setBitmap(mIconBitmaps[i]);
-            iconView.setPath(mPath);
+            iconView.setBitmap(bitmap);
             iconView.setPathMeasure(mPathMeasure);
             long dur = duration - mBlockDuration * i;
             iconView.setDuration(dur);
@@ -92,52 +83,55 @@ public class PathViewGroup extends ViewGroup {
             iconView.setPathLength(len);
             delay += mBlockDuration * i;
             iconView.setDelayMillis(delay);
-
+            mIconBitmaps[i] = bitmap;
             mIconViews[i] = iconView;
             addView(iconView);
         }
-        setWillNotDraw(false);
     }
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         Log.i(tag, "onLayout");
         int childCount = this.getChildCount();
-        for(int i = 0; i < childCount; i++) {
+
+        //路径
+        View pathView = getChildAt(0);
+        LayoutParams pathParams = pathView.getLayoutParams();
+        pathView.layout(0, 0, pathParams.width, pathParams.height);
+
+        //图标
+        for(int i = 1; i < childCount; i++) {
             View child = this.getChildAt(i);
-            int halfWidth = mIconBitmaps[i].getWidth() / 2;
-            int halfHeight = mIconBitmaps[i].getHeight() / 2;
+            int halfWidth = mIconBitmaps[i-1].getWidth() / 2;
+            int halfHeight = mIconBitmaps[i-1].getHeight() / 2;
             child.layout(230 - halfWidth, 1400 - halfHeight, 230 + halfWidth, 1400 + halfHeight);
         }
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         Log.i(tag, "onMeasure");
-        int rw = MeasureSpec.getSize(widthMeasureSpec);
-        int rh = MeasureSpec.getSize(heightMeasureSpec);
-//        Log.i(tag, "rw = " + rw);
-//        Log.i(tag, "rh = " + rh);
+
+        int widthSize = MeasureSpec.getSize(widthMeasureSpec);
+        int widthMode = MeasureSpec.getMode(widthMeasureSpec);
+        int heightSize = MeasureSpec.getSize(heightMeasureSpec);
+        int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+
         measureChildren(widthMeasureSpec, heightMeasureSpec);
         int cWidth;
         int cHeight;
         int childCount = this.getChildCount();
         for(int i = 0; i < childCount; i++) {
             View child = this.getChildAt(i);
+
             cWidth = child.getMeasuredWidth();
             cHeight = child.getMeasuredHeight();
 
 //            Log.i(tag, "cWidth = " + cWidth);
 //            Log.i(tag, "cHeight = " + cHeight);
         }
-        setMeasuredDimension(rw, rh);
-    }
-
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
-        Log.i(tag, "onDraw");
-        canvas.drawPath(mPath, mPaint);
+        setMeasuredDimension(widthSize, heightSize);
     }
 
     @Override

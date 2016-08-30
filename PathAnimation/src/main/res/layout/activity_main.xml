@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/bg_main"
     tools:context="com.hua.pathanimation.MainActivity">
 
-    <com.hua.pathanimation.PathViewGroup
+    <com.hua.pathanimation.PathAnimationLayout
         android:id="@+id/path_view_group"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

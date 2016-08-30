@@ -6,17 +6,17 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    private PathViewGroup mPathViewGroup;
+    private PathAnimationLayout mPathAnimationLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mPathViewGroup = (PathViewGroup) findViewById(R.id.path_view_group);
-        mPathViewGroup.setOnClickListener(new View.OnClickListener() {
+        mPathAnimationLayout = (PathAnimationLayout) findViewById(R.id.path_view_group);
+        mPathAnimationLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mPathViewGroup.startAnimation();
+//                mPathAnimationLayout.startAnimation();
             }
         });
     }

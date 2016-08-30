@@ -10,4 +10,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    /**
+     * 随便
+     * @param a
+     * @param b
+     */
+    private void test(int a , int b) {
+
+    }
 }
