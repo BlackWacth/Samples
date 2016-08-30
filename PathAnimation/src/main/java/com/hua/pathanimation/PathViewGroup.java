@@ -10,12 +10,14 @@ import android.graphics.Path;
 import android.graphics.PathMeasure;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 
 /**
  * Created by hzw on 2016/8/30.
  */
-public class PathViewGroup extends View {
+public class PathViewGroup extends ViewGroup {
 
     public static final String tag = "hzw";
     public static final long duration = 2000;
@@ -92,16 +94,48 @@ public class PathViewGroup extends View {
             iconView.setDelayMillis(delay);
 
             mIconViews[i] = iconView;
+            addView(iconView);
         }
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        Log.i(tag, "onLayout");
+        int childCount = this.getChildCount();
+        for(int i = 0; i < childCount; i++) {
+            View child = this.getChildAt(i);
+            int halfWidth = mIconBitmaps[i].getWidth() / 2;
+            int halfHeight = mIconBitmaps[i].getHeight() / 2;
+            child.layout(230 - halfWidth, 1400 - halfHeight, 230 + halfWidth, 1400 + halfHeight);
+        }
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        Log.i(tag, "onMeasure");
+        int rw = MeasureSpec.getSize(widthMeasureSpec);
+        int rh = MeasureSpec.getSize(heightMeasureSpec);
+        Log.i(tag, "rw = " + rw);
+        Log.i(tag, "rh = " + rh);
+        measureChildren(widthMeasureSpec, heightMeasureSpec);
+        int cWidth;
+        int cHeight;
+        int childCount = this.getChildCount();
+        for(int i = 0; i < childCount; i++) {
+            View child = this.getChildAt(i);
+            cWidth = child.getMeasuredWidth();
+            cHeight = child.getMeasuredHeight();
+
+            Log.i(tag, "cWidth = " + cWidth);
+            Log.i(tag, "cHeight = " + cHeight);
+        }
+        setMeasuredDimension(rw, rh);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         canvas.drawPath(mPath, mPaint);
-        for(int i = 0; i < icons.length; i++) {
-            mIconViews[i].draw(canvas);
-        }
     }
 
     public void startAnimation() {
