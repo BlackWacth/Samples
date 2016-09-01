@@ -2,7 +2,9 @@ package com.hua.pathanimation;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
@@ -20,12 +22,11 @@ import android.view.animation.AccelerateDecelerateInterpolator;
  */
 public class IconView extends View{
 
-    public static final String tag = "hzw";
+    public static final String tag = "IconView";
     private Bitmap mBitmap;
     private Paint mPaint;
     private long mDuration;
     private float mPathLength;
-    private Path mPath;
     private PathMeasure mPathMeasure;
     private Rect srcRect;
     private RectF dstRect;
@@ -34,31 +35,16 @@ public class IconView extends View{
     private float height, halfHeight;
 
     public IconView(Context context) {
-        super(context);
-        init();
+        this(context, null);
     }
 
     public IconView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
-    }
-
-    public IconView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        init();
-    }
-
-    public IconView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        init();
-    }
-
-    private void init() {
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.icon);
+        int srcId = typedArray.getResourceId(R.styleable.icon_src, R.mipmap.ic_main_camera);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), srcId);
+        setBitmap(bitmap);
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        srcRect = new Rect();
-        dstRect = new RectF();
-        mPath = new Path();
-        mPathMeasure = new PathMeasure();
     }
 
     @Override
@@ -67,10 +53,19 @@ public class IconView extends View{
         canvas.drawBitmap(mBitmap, srcRect, dstRect, mPaint);
     }
 
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        setMeasuredDimension((int)width, (int)height);
+    }
+
     public void startAnimator() {
+        Log.i(tag, "icon --- startAnimator()");
         postDelayed(new Runnable() {
             @Override
             public void run() {
+                if(mPathMeasure == null) {
+                    return ;
+                }
                 ValueAnimator animator = ValueAnimator.ofFloat(0, mPathLength);
                 animator.setDuration(mDuration);
                 animator.setInterpolator(new AccelerateDecelerateInterpolator());
@@ -88,6 +83,7 @@ public class IconView extends View{
                         postInvalidate();
                     }
                 });
+                animator.start();
             }
         }, delayMillis);
     }
@@ -113,16 +109,8 @@ public class IconView extends View{
         return srcRect;
     }
 
-    public void setSrcRect(Rect srcRect) {
-        this.srcRect = srcRect;
-    }
-
     public RectF getDstRect() {
         return dstRect;
-    }
-
-    public void setDstRect(RectF dstRect) {
-        this.dstRect = dstRect;
     }
 
     public Bitmap getBitmap() {
@@ -135,10 +123,12 @@ public class IconView extends View{
         halfWidth = width / 2;
         height = mBitmap.getHeight();
         halfHeight = height / 2;
-        srcRect.left = 0;
-        srcRect.top = 0;
-        srcRect.right = (int) width;
-        srcRect.bottom = (int) height;
+        if(srcRect == null) {
+            srcRect = new Rect(0, 0, (int)width, (int)height);
+        }
+        if(dstRect == null) {
+            dstRect = new RectF(0, 0, width, height);
+        }
     }
 
     public Paint getPaint() {
@@ -163,14 +153,5 @@ public class IconView extends View{
 
     public void setPathLength(float pathLength) {
         mPathLength = pathLength;
-    }
-
-    public Path getPath() {
-        return mPath;
-    }
-
-    public void setPath(Path path) {
-        mPath = path;
-        mPathMeasure.setPath(mPath, false);
     }
 }

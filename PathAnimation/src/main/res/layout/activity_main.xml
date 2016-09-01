@@ -2,13 +2,41 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_main_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/bg_main"
     tools:context="com.hua.pathanimation.MainActivity">
 
-    <com.hua.pathanimation.PathAnimationLayout
-        android:id="@+id/path_view_group"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/iv_main_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_main_camera"/>
+    <ImageView
+        android:id="@+id/iv_main_selfie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_main_selfie"/>
+    <ImageView
+        android:id="@+id/iv_main_antenna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_main_antenna"/>
+    <ImageView
+        android:id="@+id/iv_main_fast_fill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_main_fast_fill"/>
+    <ImageView
+        android:id="@+id/iv_main_fingerprint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_main_fingerprint"/>
+    <ImageView
+        android:id="@+id/iv_main_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_main_more"/>
 
 </RelativeLayout>

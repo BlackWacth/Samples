@@ -31,8 +31,6 @@ public class PathAnimationView extends View{
             R.mipmap.ic_main_more
     };
 
-
-
     private Paint mPathPaint;
     private Path mPath;
     private PathMeasure mPathMeasure;

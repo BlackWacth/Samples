@@ -29,7 +29,7 @@ public class PathView extends View {
 
     private void init() {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeWidth(3);
         mPaint.setColor(Color.RED);
 

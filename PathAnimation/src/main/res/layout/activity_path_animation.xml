@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:icon="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/bg_main"
+    tools:context="com.hua.pathanimation.PathAnimationActivity">
+
+    <com.hua.pathanimation.PathAnimationLayout
+        android:id="@+id/path_animation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hua.pathanimation.IconView
+            android:id="@+id/iv_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            icon:src="@mipmap/ic_main_camera"/>
+
+        <com.hua.pathanimation.IconView
+            android:id="@+id/iv_selfie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            icon:src="@mipmap/ic_main_selfie"/>
+
+        <com.hua.pathanimation.IconView
+            android:id="@+id/iv_antenna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            icon:src="@mipmap/ic_main_antenna"/>
+
+        <com.hua.pathanimation.IconView
+            android:id="@+id/iv_fast_fill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            icon:src="@mipmap/ic_main_fast_fill"/>
+
+        <com.hua.pathanimation.IconView
+            android:id="@+id/iv_fingerprint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            icon:src="@mipmap/ic_main_fingerprint"/>
+
+        <com.hua.pathanimation.IconView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            icon:src="@mipmap/ic_main_more"/>
+
+    </com.hua.pathanimation.PathAnimationLayout>
+
+</RelativeLayout>
