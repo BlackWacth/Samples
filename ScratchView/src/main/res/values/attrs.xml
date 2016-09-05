@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ScratchView">
+        <attr name="maskColor" format="color|reference"/> <!-- 蒙层的颜色 -->
+        <attr name="watermark" format="reference"/> <!-- 水印图片值 -->
+        <attr name="eraseSize" format="float"/> <!-- 擦除尺寸大小 -->
+        <attr name="minWipePercent" format="integer"/> <!-- 最小擦除比例 -->
+    </declare-styleable>
+</resources>

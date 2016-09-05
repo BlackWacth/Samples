@@ -12,7 +12,15 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.LinearInterpolator;
 import android.widget.RelativeLayout;
+
+import com.hua.pathanimation.interpolater.BackOutInterpolator;
+import com.hua.pathanimation.interpolater.BreathInterpolator;
+import com.hua.pathanimation.interpolater.CircularOutInterpolator;
+import com.hua.pathanimation.interpolater.ExpoOutInterpolator;
+import com.hua.pathanimation.interpolater.QuadOutInterpolator;
 
 /**
  *
@@ -121,7 +129,9 @@ public class PathCircleLayout extends RelativeLayout {
         final float halfHeight = view.getHeight() / 2;
         ValueAnimator animator = ValueAnimator.ofFloat(0, length);
         animator.setDuration(duration);
-        animator.setInterpolator(new AccelerateDecelerateInterpolator());
+//        animator.setInterpolator(new BackOutInterpolator());
+        animator.setInterpolator(new ExpoOutInterpolator());
+
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {

@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/Retrofit/Retrofit.iml" filepath="$PROJECT_DIR$/Retrofit/Retrofit.iml" />
       <module fileurl="file://$PROJECT_DIR$/RxJava/RxJava.iml" filepath="$PROJECT_DIR$/RxJava/RxJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/Samples.iml" filepath="$PROJECT_DIR$/Samples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ScratchView/ScratchView.iml" filepath="$PROJECT_DIR$/ScratchView/ScratchView.iml" />
       <module fileurl="file://$PROJECT_DIR$/SlidingViewPager/SlidingViewPager.iml" filepath="$PROJECT_DIR$/SlidingViewPager/SlidingViewPager.iml" />
       <module fileurl="file://$PROJECT_DIR$/Transitions/Transitions.iml" filepath="$PROJECT_DIR$/Transitions/Transitions.iml" />
       <module fileurl="file://$PROJECT_DIR$/bezier/bezier.iml" filepath="$PROJECT_DIR$/bezier/bezier.iml" />

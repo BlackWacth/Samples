@@ -15,6 +15,12 @@ public class PathCircleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_path_circle);
         mPathCircleLayout = (PathCircleLayout) findViewById(R.id.path_circle_layout);
+        mPathCircleLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPathCircleLayout.startAnimatorAll();
+            }
+        });
         mPathCircleLayout.addOnItemClickListener(new PathCircleLayout.OnItemClickListener() {
             @Override
             public void onItemClick(int position, PathCircleItemView view) {
