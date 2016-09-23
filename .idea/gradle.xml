@@ -30,6 +30,7 @@
             <option value="$PROJECT_DIR$/myapplication" />
             <option value="$PROJECT_DIR$/navigationbar" />
             <option value="$PROJECT_DIR$/rotate3d" />
+            <option value="$PROJECT_DIR$/svg" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
